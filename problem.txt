@@ -1,0 +1,40 @@
+Build a PHP project for ticketing system that via API endpoints and a front end page the user can create a ticket, and :
+
+create a mySQL database called "ticket_system"
+create two tables in the database
+"tickets" with the following fields:
+ticket_id
+ticket_date
+user_email
+user_full_name
+user_phone
+ticket_title
+ticket_description
+ticket_status_id
+"ticket_status" with the following fields:
+status_id
+status_name
+create a view in the database that joins the two tables in a single view
+create two JSON API Endpoints:
+"insert_ticket" that will insert the ticket into the DB
+Will receive the following input parameters:
+ticket_date
+user_email
+user_full_name
+user_phone
+ticket_title
+ticket_description
+ticket_status_id
+Will output the following object
+is_error (boolean)
+ticket_id
+message
+"update_ticket_status" that will update the ticket in the db
+Will receive the following input parameters:
+ticket_id
+status_id
+will output the following object
+is_error (boolean)
+message
+create a simple HTML page for each endpoint with the form to insert the data and send that form data via AJAX to the API and display the response
+Please use global config file for the API with the DB parameters and use PDO for accessing the data in PHP
